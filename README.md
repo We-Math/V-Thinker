@@ -22,9 +22,20 @@
 
 ## 📣 Latest News
 
-- **[January 2026]**: 🚀 V-Thinker codebase and datasets released!
-- **[January 2026]**: 📄 Our paper is now available on arXiv.
-- **[January 2026]**: 🎯 Introduced **VTBench**, an expert-verified benchmark for vision-centric interactive reasoning.
+- **[Nov 6, 2026]**: 🚀 V-Thinker codebase and datasets released!
+- **[Nov 6, 2026]**: 📄 Our paper is now available on arXiv.
+- **[Nov 6, 2026]**: 🎯 Introduced **VTBench**, an expert-verified benchmark for vision-centric interactive reasoning.
+
+---
+
+## 📂 Datasets
+
+| Dataset | Description | Size | Download |
+|---------|-------------|------|----------|
+| **V-Interaction-400K** | Interactive reasoning with 25+ domains | 400K | [🤗 HuggingFace](https://huggingface.co/datasets/We-Math/V-Interaction-400K) |
+| **V-Perception-40K** | Point-level perception alignment | 40K | [🤗 HuggingFace](https://huggingface.co/datasets/We-Math/V-Perception-40K) |
+| **VTBench** | Expert-verified interactive benchmark | 1.5K | [🤗 HuggingFace](https://huggingface.co/datasets/We-Math/VTBench) |
+
 
 ---
 
@@ -34,15 +45,7 @@
 
 **V-Thinker** is a general-purpose multimodal reasoning assistant that enables **Interactive Thinking with Images** through end-to-end reinforcement learning. Unlike traditional vision-language models, V-Thinker actively **interacts** with visual content—editing, annotating, and transforming images to simplify complex problems.
 
-### 🎯 Three Paradigms of Vision-Centric Reasoning
-
-<div align="center">
-  <img src="./figures/fig1.png" width="80%" />
-</div>
-
-1. **Direct Thinking**: Traditional reasoning without visual interaction
-2. **Thinking with Images**: Using images to assist reasoning (e.g., o3)
-3. **Interactive Thinking with Images** ⭐ (Ours): Actively modifying images during reasoning
+<img width="682" height="299" alt="image" src="https://github.com/user-attachments/assets/ef4ddafe-a802-4216-b9d5-045d4b62c36f" />
 
 ---
 
@@ -51,10 +54,6 @@
 ### 🔄 Data Evolution Flywheel
 
 Automated synthesis of high-quality interactive reasoning data across three dimensions:
-
-<div align="center">
-  <img src="./figures/fig4.png" width="95%" />
-</div>
 
 - **Diversity**: Knowledge-driven synthesis from 25+ domains → **22,319 nodes** across 7 layers
 - **Quality**: Coordinated checker-repairer mechanism for multi-modal consistency
@@ -70,36 +69,15 @@ Automated synthesis of high-quality interactive reasoning data across three dime
 
 Two-stage framework progressively building perception and interactive reasoning:
 
-<div align="center">
-  <img src="./figures/fig6.png" width="85%" />
-</div>
-
 **Stage 1: Perception Alignment** → Fine-grained visual grounding with point-level supervision
 
 **Stage 2: Interactive Reasoning** → Cold-start SFT + RL in sandboxed code executor
 
 ---
 
-## 🎬 Interactive Reasoning Examples
+## 🎬 Interactive Image Examples
 
-<table>
-  <tr>
-    <td width="50%">
-      <img src="./figures/example_geometry.png" width="100%"/>
-      <p align="center"><b>Geometry with Auxiliary Lines</b></p>
-    </td>
-    <td width="50%">
-      <img src="./figures/example_counting.png" width="100%"/>
-      <p align="center"><b>Visual Counting & Labeling</b></p>
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2">
-      <img src="./figures/fig11-cot.png" width="100%"/>
-      <p align="center"><b>Complete Interactive Reasoning Trajectory: Think → Edit → Verify</b></p>
-    </td>
-  </tr>
-</table>
+<img width="679" height="280" alt="image" src="https://github.com/user-attachments/assets/76d76528-1cad-4928-a716-7ad04bfe9f08" />
 
 ---
 
@@ -107,9 +85,8 @@ Two-stage framework progressively building perception and interactive reasoning:
 
 Expert-verified benchmark with **1,500 QA pairs** across three hierarchical dimensions:
 
-<div align="center">
-  <img src="./figures/fig7.png" width="95%" />
-</div>
+<img width="686" height="298" alt="image" src="https://github.com/user-attachments/assets/c853148c-5916-4614-9824-2c9096a75138" />
+
 
 ```
 Perception → Instruction-Guided Interaction → Interactive Reasoning
@@ -121,27 +98,6 @@ Perception → Instruction-Guided Interaction → Interactive Reasoning
 | **Sources** | 9 open-source benchmarks |
 | **Domains** | Logical Reasoning, Geometry, Algebra, Statistics |
 
----
-
-## 🏆 Performance Results
-
-### VTBench Results
-
-| Model | Perception | Instruction-Guided | Interactive Reasoning |
-|-------|------------|-------------------|----------------------|
-| GPT-4o | 2.3 | 3.7 | 38.3 |
-| InternVL3-78B | 10.8 | 16.0 | 43.4 |
-| Qwen2.5-VL-7B | 9.6 | 8.8 | 32.2 |
-| **V-Thinker-7B** | **18.0** (+8.4) | **34.6** (+25.8) | **41.8** (+9.6) |
-
-### General Reasoning Benchmarks
-
-| Model | MathVision | We-Math | VisuLogic |
-|-------|------------|---------|-----------|
-| Qwen2.5-VL-7B | 23.0 | 61.7 | 26.0 |
-| **V-Thinker-7B** | **29.3** (+6.3) | **62.8** (+1.1) | **26.6** (+0.6) |
-
----
 
 ## 🚀 Quick Start
 
@@ -176,30 +132,30 @@ python src/run_vthinker.py --benchmark mathvision --eval
 
 ---
 
-## 📂 Datasets
+## 🏆 Performance Results
 
-| Dataset | Description | Size | Download |
-|---------|-------------|------|----------|
-| **V-Interaction-400K** | Interactive reasoning with 25+ domains | 400K | [🤗 HuggingFace](https://huggingface.co/datasets/We-Math/V-Interaction-400K) |
-| **V-Perception-40K** | Point-level perception alignment | 40K | [🤗 HuggingFace](https://huggingface.co/datasets/We-Math/V-Perception-40K) |
-| **VTBench** | Expert-verified interactive benchmark | 1.5K | [🤗 HuggingFace](https://huggingface.co/datasets/We-Math/VTBench) |
+### VTBench Results
+
+| Model | Perception | Instruction-Guided | Interactive Reasoning |
+|-------|------------|-------------------|----------------------|
+| GPT-4o | 2.3 | 3.7 | 38.3 |
+| InternVL3-78B | 10.8 | 16.0 | 43.4 |
+| Qwen2.5-VL-7B | 9.6 | 8.8 | 32.2 |
+| **V-Thinker-7B** | **18.0** (+8.4) | **34.6** (+25.8) | **41.8** (+9.6) |
+
+### General Reasoning Benchmarks
+
+| Model | MathVision | We-Math | VisuLogic |
+|-------|------------|---------|-----------|
+| Qwen2.5-VL-7B | 23.0 | 61.7 | 26.0 |
+| **V-Thinker-7B** | **29.3** (+6.3) | **62.8** (+1.1) | **26.6** (+0.6) |
 
 ---
 
-## 🔬 Key Insights
+## 🔬 Case Studies
+![Uploading image.png…]()
 
-<table>
-  <tr>
-    <td width="50%">
-      <img src="./figures/tree_fan_final.png" width="100%"/>
-      <p align="center"><b>Knowledge System Evolution</b><br/>22,319 nodes across 25 domains</p>
-    </td>
-    <td width="50%">
-      <img src="./figures/zhexian.png" width="100%"/>
-      <p align="center"><b>Scaling Analysis</b><br/>~50× expansion after 5 iterations</p>
-    </td>
-  </tr>
-</table>
+
 
 ---
 
