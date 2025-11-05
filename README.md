@@ -1,4 +1,4 @@
-# <h1 align="center"><br>Interactive Thinking with Images</h1>
+# <h1 align="center">Interactive Thinking with Images</h1>
 
 <div align="center">
 
