@@ -1,4 +1,4 @@
-# <h1 align="center"><img src="./figures/logo_vthinker.png" width="300" style="vertical-align:middle;"/><br>Interactive Thinking with Images</h1>
+# <h1 align="center"><br>Interactive Thinking with Images</h1>
 
 <div align="center">
 
