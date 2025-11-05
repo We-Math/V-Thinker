@@ -1,1 +1,1 @@
-# V-Thinker
+# V-Thinker: Interactive Thinking with Images
