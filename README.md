@@ -87,11 +87,6 @@ Expert-verified benchmark with **1,500 QA pairs** across three hierarchical dime
 
 <img width="686" height="298" alt="image" src="https://github.com/user-attachments/assets/c853148c-5916-4614-9824-2c9096a75138" />
 
-
-```
-Perception → Instruction-Guided Interaction → Interactive Reasoning
-```
-
 | Metric | Specification |
 |--------|---------------|
 | **Samples** | 1,500 expert-verified pairs (500 per task type) |
@@ -153,7 +148,15 @@ python src/run_vthinker.py --benchmark mathvision --eval
 ---
 
 ## 🔬 Case Studies
-![Uploading image.png…]()
+<img width="641" height="637" alt="截屏2025-11-06 00 54 13" src="https://github.com/user-attachments/assets/7f10bc54-ca02-4d63-9960-17af739f6fd3" />
+
+<img width="578" height="131" alt="image" src="https://github.com/user-attachments/assets/de73c181-d413-4617-b775-08bdd4e6e624" />
+
+<img width="585" height="711" alt="image" src="https://github.com/user-attachments/assets/35133170-ce70-41c0-891c-b82091aa6329" />
+
+
+## 🔬 Evovled Knowledge System
+<img width="589" height="374" alt="image" src="https://github.com/user-attachments/assets/07169a81-55ea-4841-83a0-ec00617dc3ad" />
 
 
 
@@ -169,14 +172,6 @@ python src/run_vthinker.py --benchmark mathvision --eval
   year={2026}
 }
 ```
-
----
-
-## 🤝 Related Work
-
-> [**DeepAgent**](https://github.com/RUC-NLPIR/DeepAgent) - General reasoning agent with scalable toolsets [![Stars](https://img.shields.io/github/stars/RUC-NLPIR/DeepAgent.svg?style=social)](https://github.com/RUC-NLPIR/DeepAgent)
-
-> [**We-Math**](https://github.com/We-Math/We-Math) - Large-scale visual math benchmark [![Stars](https://img.shields.io/github/stars/We-Math/We-Math.svg?style=social)](https://github.com/We-Math/We-Math)
 
 ---
 
