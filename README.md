@@ -1,4 +1,6 @@
+<div align="center">
 <img width="380" height="163" alt="image" src="https://github.com/user-attachments/assets/1de5f268-7f4f-4de4-abd6-73617ccddfa9" />
+</div>
 
 # <h1 align="center">Interactive Thinking with Images</h1>
 
