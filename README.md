@@ -49,6 +49,7 @@ V-Thinker is still under development and there are many issues and room for impr
 
 **V-Thinker** is a general-purpose multimodal reasoning assistant that enables **Interactive Thinking with Images** through end-to-end reinforcement learning. Unlike traditional vision-language models, V-Thinker actively **interacts** with visual content—editing, annotating, and transforming images to simplify complex problems.
 
+
 <div align="center">
 <img width="682" height="299" alt="image" src="./assets/3.png" />
 </div>
@@ -59,13 +60,17 @@ V-Thinker is still under development and there are many issues and room for impr
 
 <div align="center">
 
-| Dataset | Description | Size | Download |
-|---------|-------------|------|----------|
-| **V-Interaction-400K** | Large-scale interactive reasoning dataset | 400K | [🤗 HuggingFace](https://huggingface.co/datasets/We-Math/V-Interaction-400K) |
-| **V-Perception-40K** | Point-level perception alignment dataset | 40K | [🤗 HuggingFace](https://huggingface.co/datasets/We-Math/V-Perception-40K) |
-| **VTBench** | Expert-verified interactive benchmark | 1.5K | [🤗 HuggingFace](https://huggingface.co/datasets/We-Math/VTBench) |
+| Dataset | Description | Download |
+|---------|-------------|----------|
+| **V-Interaction-400K** | Large-scale interactive reasoning dataset | [🤗 HuggingFace](https://huggingface.co/datasets/We-Math/V-Interaction-400K) |
+| **V-Perception-40K** | Point-level perception alignment dataset | [🤗 HuggingFace](https://huggingface.co/datasets/We-Math/V-Perception-40K) |
+| **VTBench** | Expert-verified interactive benchmark | [🤗 HuggingFace](https://huggingface.co/datasets/We-Math/VTBench) |
 
 </div>
+
+### 💡 Rethinking the Data Synthesis Paradigm
+
+We rethink the traditional data synthesis paradigm by transforming models from **"solvers"** to **"creators"**, enabling them to directly generate high-quality multimodal reasoning data through code-level rendering and reasoning generation. Furthermore, by leveraging knowledge-driven representations, structured knowledge systems guide models to produce diverse, coherent, and spatially aligned problems, expanding the scope and evolution of reasoning data.
 
 
 
@@ -73,9 +78,9 @@ V-Thinker is still under development and there are many issues and room for impr
 
 Automated synthesis of high-quality interactive reasoning data across three dimensions:
 
-- **Diversity**: Knowledge-driven synthesis from **seed knowledge (We-Math2.0)** → **25 domains** → **22,319 nodes**
-- **Quality**: Coordinated checker-repairer mechanism for multi-modal consistency
-- **Difficulty**: Progressive expansion via parallel & sequential strategies
+- **Diversity**: Knowledge-driven synthesis from seed concepts ([We-Math2.0](https://we-math2.github.io/)) expanding to 25 domains and 24,767 nodes, enabling continuous evolution from data expansion to genuine data creation.
+- **Quality**: A coordinated checker–repairer mechanism ensures cross-modal consistency and high fidelity across textual, visual, and image-action dimensions.
+- **Difficulty**: A progressive expansion stage enriches the difficulty ladder through parallel and sequential extension strategies, supporting scalable reasoning complexity.
 
 
 <div align="center">
