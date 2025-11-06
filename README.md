@@ -49,6 +49,23 @@ V-Thinker is still under development and there are many issues and room for impr
 
 ---
 
+## 📑 Contents
+
+> [!NOTE]
+> Quick navigation guide for exploring **V-Thinker**
+
+- [💡 Overview](#-overview)
+- [🚀 Quick Start](#-quick-start)
+- [🏆 Experiments Results](#-experiments-results)
+- [📄 Citation](#-citation)
+- [🤝 Acknowledge](#-acknowledge)
+- [📞 Contact](#-contact)
+
+
+
+
+---
+
 ## 💡 Overview
 
 
@@ -70,7 +87,7 @@ V-Thinker is still under development and there are many issues and room for impr
 
 
 <div align="center">
-<img width="679" height="280" alt="image" src="./assets/fig2.jpg" />
+<img width="800"  alt="image" src="./assets/fig2.jpg" />
 </div>
 
 
@@ -89,7 +106,7 @@ Automated synthesis of high-quality interactive reasoning data across three dime
 - **Difficulty**: A progressive expansion stage enriches the difficulty ladder through parallel and sequential extension strategies, supporting scalable reasoning complexity.
 
 <div align="center">
-<img width="682" height="299" alt="image" src="./assets/3.png" />
+<img width="800"  alt="image" src="./assets/fig4.png" />
 </div>
 
 
@@ -111,7 +128,7 @@ Two-stage framework progressively building perception and interactive reasoning:
 Expert-verified benchmark with **1,500 QA pairs** across three hierarchical dimensions:
 
 <div align="center">
-<img width="686" height="298" alt="image" src="./assets/vtbench.png" />
+<img width="700"  alt="image" src="./assets/fig7.png" />
 
 | Task | Specification |
 |--------|---------------|
@@ -179,7 +196,7 @@ python src/run_vthinker.py --benchmark mathvision --eval
 
 ## 🏆 Experiments Results
 
-### Quantitative Results On VTBench
+> ### Quantitative Results On VTBench
 
 
 <div align="center">
@@ -194,22 +211,37 @@ python src/run_vthinker.py --benchmark mathvision --eval
 </div>
 
 
-### Qualitative Results
+> ### Qualitative Results
+<details>
+  <summary><b>Qualitative Analysis</b></summary>
+  <div align="center">
+    <img width="650"  alt="Qualitative Analysis" src="./assets/fig8.jpg" />
+  </div>
+</details>
 
-<div align="center">
-<img width="641" height="637" alt="截屏2025-11-06 00 54 13" src="./assets/10.png" />
+<details>
+  <summary><b>Rollout Sampling</b></summary>
+  <div align="center">
+    <img width="800"  alt="Rollout Sampling" src="./assets/fig9.png" />
+  </div>
+</details>
 
-<img width="578" height="131" alt="image" src="./assets/rollout.png" />
+<details>
+  <summary><b>CoT</b></summary>
+  <div align="center">
+    <img width="650"  alt="CoT" src="./assets/fig11.jpg" />
+  </div>
+</details>
 
-<img width="585" height="711" alt="image" src="./assets/510265165-35133170-ce70-41c0-891c-b82091aa6329.png" />
+<details>
+  <summary><b>Evovled Knowledge System</b></summary>
+  <div align="center">
+    <img width="650"  alt="CoT" src="./assets/fig10.jpg" />
+  </div>
+</details>
 
-</div>
 
 
-### 🔬 Evovled Knowledge System
-<div align="center">
-<img width="589" height="374" alt="image" src="./assets/tree.png" />
-</div>
 
 
 ---
