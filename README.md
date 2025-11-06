@@ -30,8 +30,8 @@
 
 ## 📣 Latest News
 
-- **[Nov 7, 2026]**: 🔥 We released [**V-Interaction-400K**](https://huggingface.co/datasets/We-Math/V-Interaction-400K) *(preview version)* — a large-scale, high-quality visual interaction dataset which can also be extended to image-to-code tasks.  
-- **[Nov 7, 2026]**: 🔥 We released [**V-Perception-40K**](https://huggingface.co/datasets/We-Math/V-Perception-40K) *(preview version)* — a high-quality dataset for point-level perceptual alignment.  
+- **[Nov 7, 2026]**: 🔥 We released [**V-Interaction-400K**](https://huggingface.co/datasets/We-Math/V-Interaction-400K) *(preview version, containing 252K samples)* — a large-scale, high-quality visual interaction dataset which can also be extended to image-to-code tasks.  
+- **[Nov 7, 2026]**: 🔥 We released [**V-Perception-40K**](https://huggingface.co/datasets/We-Math/V-Perception-40K) *(preview version, containing 37K samples)* — a high-quality dataset for point-level perceptual alignment.  
 - **[Nov 7, 2026]**: 🔥 We released [**VTBench**](https://huggingface.co/datasets/We-Math/VTBench), a standardized benchmark for interactive visual reasoning across three task types — Perception, Instruction-Guided Interaction, and Interactive Reasoning.
 - **[Nov 7, 2026]**: 📄 Our paper is now available on arXiv and Hugging Face daily paper.
 
