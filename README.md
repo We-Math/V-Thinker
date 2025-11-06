@@ -1,6 +1,6 @@
 
 <div align="center">
-  <img src="./assets/logo.png" alt="V-Thinker Logo" width="400">
+  <img src="./assets/logo1.png" alt="V-Thinker Logo" width="400">
 </div>
 
 
