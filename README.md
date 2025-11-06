@@ -22,9 +22,19 @@
 
 ## 📣 Latest News
 
-- **[Nov 6, 2026]**: 🚀 V-Thinker codebase and datasets released!
-- **[Nov 6, 2026]**: 📄 Our paper is now available on arXiv.
-- **[Nov 6, 2026]**: 🎯 Introduced **VTBench**, an expert-verified benchmark for vision-centric interactive reasoning.
+- **[Nov 7, 2026]**: 🚀 V-Thinker codebase and datasets released!
+- **[Nov 7, 2026]**: 📄 Our paper is now available on arXiv.
+- **[Nov 7, 2026]**: 🎯 Introduced **VTBench**, an expert-verified benchmark for vision-centric interactive reasoning.
+
+---
+
+## :mag_right: Roadmap
+
+Tool-star is still under development and there are many issues and room for improvement. We will continue to update. And we also sincerely welcome contributions on this open-source toolkit.
+- [x] Release tiny LLM version (e.g. 0.5B, 1.5B)
+- [x] Support larger parameter size LLM (e.g. 7B)
+- [x] Update asynchronous and efficient training framework.（See **[ARPO](https://github.com/dongguanting/ARPO)** , which significantly accelerates the training process for Tool-star (**~4 times faster** )）
+
 
 ---
 
