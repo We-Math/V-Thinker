@@ -24,6 +24,12 @@
   <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=20&duration=3000&pause=1000&color=005DE3&center=true&vCenter=true&width=800&lines=Welcome+to+V-Thinker;Interactive+Thinking+with+Images;Powered+by+BUPT+x+Tencent+WeChat" alt="Typing Animation" />
 </div>
 
+<div align="center">
+🤗 <a href="https://huggingface.co/datasets/We-Math/V-Interaction-400K" target="_blank">V-Interaction-400K</a> ｜
+🤗 <a href="https://huggingface.co/datasets/We-Math/VTBench" target="_blank">VTBench</a> ｜
+🤗 <a href="https://huggingface.co/datasets/We-Math/V-Perception-40K" target="_blank">V-Perception-40K</a>
+</div>
+
 ---
 
 
