@@ -1,5 +1,5 @@
 <div align="center">
-<img width="380" height="163" alt="image" src="https://github.com/user-attachments/assets/1de5f268-7f4f-4de4-abd6-73617ccddfa9" />
+<img width="380" height="163" alt="image" src="./assets/1.png" />
 </div>
 <h1 align="center">✨ V-Thinker: Interactive Thinking with Images</h1>
 
@@ -45,7 +45,7 @@
 
 **V-Thinker** is a general-purpose multimodal reasoning assistant that enables **Interactive Thinking with Images** through end-to-end reinforcement learning. Unlike traditional vision-language models, V-Thinker actively **interacts** with visual content—editing, annotating, and transforming images to simplify complex problems.
 
-<img width="682" height="299" alt="image" src="https://github.com/user-attachments/assets/ef4ddafe-a802-4216-b9d5-045d4b62c36f" />
+<img width="682" height="299" alt="image" src="./assets/3.png" />
 
 ---
 
@@ -77,7 +77,7 @@ Two-stage framework progressively building perception and interactive reasoning:
 
 ## 🎬 Interactive Image Examples
 
-<img width="679" height="280" alt="image" src="https://github.com/user-attachments/assets/76d76528-1cad-4928-a716-7ad04bfe9f08" />
+<img width="679" height="280" alt="image" src="./assets/2.png" />
 
 ---
 
@@ -85,7 +85,7 @@ Two-stage framework progressively building perception and interactive reasoning:
 
 Expert-verified benchmark with **1,500 QA pairs** across three hierarchical dimensions:
 
-<img width="686" height="298" alt="image" src="https://github.com/user-attachments/assets/c853148c-5916-4614-9824-2c9096a75138" />
+<img width="686" height="298" alt="image" src="./assets/vtbench.png" />
 
 | Metric | Specification |
 |--------|---------------|
@@ -101,27 +101,42 @@ Expert-verified benchmark with **1,500 QA pairs** across three hierarchical dime
 ```bash
 conda create -n vthinker python=3.10
 conda activate vthinker
-pip install -r requirements.txt
+pip install -e .
 ```
 
 ### Training
+Download the perception dataset ([V-Perception-40K](https://huggingface.co/datasets/We-Math/V-Perception-40K))  SFT dataset ([V-Interaction-400K](https://huggingface.co/datasets/We-Math/V-Interaction-400K))   RL dataset ([WeMath 2.0](https://huggingface.co/datasets/We-Math/V-Interaction-400K) [MMK12](https://huggingface.co/datasets/FanqingM/MMK12) [ThinkLite](https://huggingface.co/datasets/russwang/ThinkLite-VL-hard-11k)) to the data folder and modify the image path as needed to match your coding environment.
 
+Please ensure you have modified the model and dataset paths in the script to match your environment.
 ```bash
 # Perception Alignment
-python src/train_perception.py --config_path ./config/base_config.yaml
-
-# Interactive Reasoning (SFT + RL)
-python src/train_interactive_sft.py --config_path ./config/base_config.yaml
-python src/train_interactive_rl.py --config_path ./config/base_config.yaml
+sh scripts/perception.sh
+```
+```bash
+# Interactive Reasoning (SFT + RL).
+sh scripts/sft.sh
+sh scripts/rl.sh
 ```
 
 ### Inference
+Environment setup for eval
+```bash
+pip install --upgrade vllm
+```
+Download the [VTBench](https://huggingface.co/datasets/We-Math/VTBench) to the data folder and corresponding images to the eval/vtbrnch_IP, eval/vtbrnch_IGI, eval/vtbrnch_Perception folder.
 
+Please ensure you have modified the model paths in the script to match your environment.
 ```bash
 # Run on VTBench
-python src/run_vthinker.py --benchmark vtbench --eval
+cd eval/vtbrnch_IP
+sh run.sh
+```
+Download the [MathVison](https://huggingface.co/datasets/We-Math/VTBench), [WeMath](https://huggingface.co/datasets/We-Math/VTBench), [Visulogic](https://huggingface.co/datasets/We-Math/VTBench) to the data folder and modify the image path as needed to match your coding environment.
 
+For Visulogic, you also need to download the corresponding [Visulogic images](https://huggingface.co/datasets/We-Math/VTBench) to the eval/visulogic folder.
+```bash
 # Run on general benchmarks
+cd eval/mathvision
 python src/run_vthinker.py --benchmark mathvision --eval
 ```
 
@@ -148,15 +163,15 @@ python src/run_vthinker.py --benchmark mathvision --eval
 ---
 
 ## 🔬 Case Studies
-<img width="641" height="637" alt="截屏2025-11-06 00 54 13" src="https://github.com/user-attachments/assets/7f10bc54-ca02-4d63-9960-17af739f6fd3" />
+<img width="641" height="637" alt="截屏2025-11-06 00 54 13" src="./assets/10.png" />
 
-<img width="578" height="131" alt="image" src="https://github.com/user-attachments/assets/de73c181-d413-4617-b775-08bdd4e6e624" />
+<img width="578" height="131" alt="image" src="./assets/rollout.png" />
 
-<img width="585" height="711" alt="image" src="https://github.com/user-attachments/assets/35133170-ce70-41c0-891c-b82091aa6329" />
+<img width="585" height="711" alt="image" src="./assets/510265165-35133170-ce70-41c0-891c-b82091aa6329.png" />
 
 
 ## 🔬 Evovled Knowledge System
-<img width="589" height="374" alt="image" src="https://github.com/user-attachments/assets/07169a81-55ea-4841-83a0-ec00617dc3ad" />
+<img width="589" height="374" alt="image" src="./assets/tree.png" />
 
 
 
