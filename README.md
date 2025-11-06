@@ -59,11 +59,15 @@ V-Thinker is still under development and there are many issues and room for impr
 
 ### 📂 Datasets
 
+<div align="center">
+
 | Dataset | Description | Size | Download |
 |---------|-------------|------|----------|
 | **V-Interaction-400K** | Large-scale interactive reasoning dataset | 400K | [🤗 HuggingFace](https://huggingface.co/datasets/We-Math/V-Interaction-400K) |
 | **V-Perception-40K** | Point-level perception alignment dataset | 40K | [🤗 HuggingFace](https://huggingface.co/datasets/We-Math/V-Perception-40K) |
 | **VTBench** | Expert-verified interactive benchmark | 1.5K | [🤗 HuggingFace](https://huggingface.co/datasets/We-Math/VTBench) |
+
+</div>
 
 
 
@@ -169,21 +173,25 @@ python src/run_vthinker.py --benchmark mathvision --eval
 #### On VTBench
 
 <div align="center">
+ 
 | Model | Perception | Instruction-Guided | Interactive Reasoning |
 |-------|------------|-------------------|----------------------|
 | GPT-4o | 2.3 | 3.7 | 38.3 |
 | InternVL3-78B | 10.8 | 16.0 | 43.4 |
 | Qwen2.5-VL-7B | 9.6 | 8.8 | 32.2 |
 | **V-Thinker-7B** | **18.0** (+8.4) | **34.6** (+25.8) | **41.8** (+9.6) |
+
 </div>
 
 #### On General Reasoning Benchmarks
 
 <div align="center">
+ 
 | Model | MathVision | We-Math | VisuLogic |
 |-------|------------|---------|-----------|
 | Qwen2.5-VL-7B | 23.0 | 61.7 | 26.0 |
 | **V-Thinker-7B** | **29.3** (+6.3) | **62.8** (+1.1) | **26.6** (+0.6) |
+
 </div>
 
 ### Qualitative Results
