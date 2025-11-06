@@ -105,7 +105,7 @@ pip install -e .
 ```
 
 ### Training
-Download the perception dataset ([V-Perception-40K](https://huggingface.co/datasets/We-Math/V-Perception-40K))  SFT dataset ([V-Interaction-400K](https://huggingface.co/datasets/We-Math/V-Interaction-400K))   RL dataset ([WeMath 2.0](https://huggingface.co/datasets/We-Math/V-Interaction-400K) [MMK12](https://huggingface.co/datasets/FanqingM/MMK12) [ThinkLite](https://huggingface.co/datasets/russwang/ThinkLite-VL-hard-11k)) to the data folder and modify the image path as needed to match your coding environment.
+Download the perception dataset ([V-Perception-40K](https://huggingface.co/datasets/We-Math/V-Perception-40K)), SFT dataset ([V-Interaction-400K](https://huggingface.co/datasets/We-Math/V-Interaction-400K)),  RL dataset ([WeMath 2.0](https://huggingface.co/datasets/We-Math/V-Interaction-400K), [MMK12](https://huggingface.co/datasets/FanqingM/MMK12), [ThinkLite](https://huggingface.co/datasets/russwang/ThinkLite-VL-hard-11k)) to the data folder and modify the image path as needed to match your coding environment.
 
 Please ensure you have modified the model and dataset paths in the script to match your environment.
 ```bash
