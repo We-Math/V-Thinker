@@ -51,7 +51,7 @@ V-Thinker is still under development and there are many issues and room for impr
 - [x] Release codebase and datasets *(preview version)*.
 - [x] Release V-Thinker-7B.
 - [ ] Release knowledge system and visual tool system.
-- [ ] Release final version of datasets (a new version is currently under iteration)
+- [ ] Release the complete version of datasets (planned before December).
 - [ ] Release improved checkpoints.
 
 ---
