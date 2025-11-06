@@ -1,15 +1,7 @@
 
 <div align="center">
-  <img src="./assets/logo1.png" alt="V-Thinker Logo" width="400">
+  <img src="./assets/logo2.png" alt="V-Thinker Logo" width="500">
 </div>
-
-
-<h1 align="center">✨ V-Thinker: Interactive Thinking with Images</h1>
-
-<!-- <div align="center">
-<img width="380" height="163" alt="image" src="./assets/1.png" />
-</div>
- -->
 
 <div align="center">
 
@@ -17,8 +9,14 @@
 [![Dataset](https://img.shields.io/badge/Dataset-HuggingFace-yellow?logo=huggingface)](https://huggingface.co/datasets/We-Math/V-Thinker)
 [![License](https://img.shields.io/badge/LICENSE-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/downloads/release/python-3100/)
+![Multimodal Reasoning](https://img.shields.io/badge/Task-Multimodal_Reasoning-red) 
+
+
+
 
 </div>
+
+---
 
 <h5 align="center">If you like our project, please give us a star ⭐ on GitHub for the latest update.</h5>
 
@@ -27,6 +25,8 @@
 </div>
 
 ---
+
+
 
 ## 📣 Latest News
 
@@ -55,13 +55,8 @@ V-Thinker is still under development and there are many issues and room for impr
 **V-Thinker** is a general-purpose multimodal reasoning assistant that enables **Interactive Thinking with Images** through end-to-end reinforcement learning. Unlike traditional vision-language models, V-Thinker actively **interacts** with visual content—editing, annotating, and transforming images to simplify complex problems.
 
 
-<div align="center">
-<img width="682" height="299" alt="image" src="./assets/3.png" />
-</div>
-
-
-
 ### 📂 Datasets
+
 
 <div align="center">
 
@@ -72,6 +67,12 @@ V-Thinker is still under development and there are many issues and room for impr
 | **VTBench** | Expert-verified interactive benchmark | [🤗 HuggingFace](https://huggingface.co/datasets/We-Math/VTBench) |
 
 </div>
+
+
+<div align="center">
+<img width="679" height="280" alt="image" src="./assets/2.png" />
+</div>
+
 
 ### 💡 Rethinking the Data Synthesis Paradigm
 
@@ -87,10 +88,12 @@ Automated synthesis of high-quality interactive reasoning data across three dime
 - **Quality**: A coordinated checker–repairer mechanism ensures cross-modal consistency and high fidelity across textual, visual, and image-action dimensions.
 - **Difficulty**: A progressive expansion stage enriches the difficulty ladder through parallel and sequential extension strategies, supporting scalable reasoning complexity.
 
-
 <div align="center">
-<img width="679" height="280" alt="image" src="./assets/2.png" />
+<img width="682" height="299" alt="image" src="./assets/3.png" />
 </div>
+
+
+
 
 
 
