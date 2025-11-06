@@ -25,10 +25,9 @@
 
 ## 📣 Latest News
 
-- **[Nov 7, 2026]**: 🔥 We released **V-Interaction-400K**, a large-scale, high-quality visual interaction dataset that can also be extended to image-to-code tasks. Checkout 🤗[V-Interaction-400K](https://huggingface.co/datasets/We-Math/V-Interaction-400K) here.
-- **[Nov 7, 2026]**: 🔥 We released **V-Perception-40K**, a high-quality dataset for point-level perceptual alignment. Checkout 🤗[V-Perception-40K](https://huggingface.co/datasets/We-Math/V-Perception-40K) here.
-- **[Nov 7, 2026]**: 🔥 We released **VTBench**, a standardized benchmark for interactive visual reasoning across three task types — Perception, Instruction-Guided Interaction, and Interactive Reasoning. Checkout 🤗[VTBench](https://huggingface.co/datasets/We-Math/VTBench) here.
-- **[Nov 7, 2026]**: 🚀 V-Thinker codebase and datasets released!
+- **[Nov 7, 2026]**: 🔥 We released [**V-Interaction-400K**](https://huggingface.co/datasets/We-Math/V-Interaction-400K) *(preview version)* — a large-scale, high-quality visual interaction dataset which can also be extended to image-to-code tasks.  
+- **[Nov 7, 2026]**: 🔥 We released [**V-Perception-40K**](https://huggingface.co/datasets/We-Math/V-Perception-40K) *(preview version)* — a high-quality dataset for point-level perceptual alignment.  
+- **[Nov 7, 2026]**: 🔥 We released [**VTBench**](https://huggingface.co/datasets/We-Math/VTBench), a standardized benchmark for interactive visual reasoning across three task types — Perception, Instruction-Guided Interaction, and Interactive Reasoning.
 - **[Nov 7, 2026]**: 📄 Our paper is now available on arXiv and Hugging Face daily paper.
 
 
@@ -37,12 +36,11 @@
 **🛠️ V-Thinker is still evolving!**
 
 V-Thinker is still under development and there are many issues and room for improvement. We will continue to update. And we also sincerely welcome contributions on this open-source toolkit.
-- [x] Release codebase and datasets.
+- [x] Release codebase and datasets *(preview version)*.
 - [x] Release V-Thinker-7B.
-- [ ] Support larger parameter size LMM.
 - [ ] Release knowledge system and visual tool system.
+- [ ] Release final version of datasets (a new version is currently under iteration)
 - [ ] Release improved checkpoints.
-
 
 ---
 
@@ -147,7 +145,7 @@ Environment setup for eval
 ```bash
 pip install --upgrade vllm
 ```
-Download the [VTBench](https://huggingface.co/datasets/We-Math/VTBench) to the data folder and corresponding images to the eval/vtbench_IR, eval/vtbench_IGI, eval/vtbench_Perception folder.
+Download the [VTBench](https://huggingface.co/datasets/We-Math/VTBench) to the data folder and corresponding images to the `eval/vtbench_IR`, `eval/vtbench_IGI`, `eval/vtbench_Perception` folder.
 
 Please ensure you have modified the model paths in the script to match your environment.
 ```bash
@@ -157,7 +155,7 @@ sh run.sh
 ```
 Download the [MathVison](https://huggingface.co/datasets/We-Math/VTBench), [WeMath](https://huggingface.co/datasets/We-Math/We-Math), [VisuLogic](https://huggingface.co/datasets/VisuLogic/VisuLogic/tree/main) to the data folder and modify the image path as needed to match your coding environment.
 
-For Visulogic, you also need to download the corresponding [VisuLogic images](https://huggingface.co/datasets/VisuLogic/VisuLogic) to the eval/visulogic folder.
+For Visulogic, you also need to download the corresponding [VisuLogic images](https://huggingface.co/datasets/VisuLogic/VisuLogic) to the `eval/visulogic` folder.
 ```bash
 # Run on general benchmarks
 cd eval/mathvision
@@ -168,9 +166,8 @@ python src/run_vthinker.py --benchmark mathvision --eval
 
 ## 🏆 Experiments Results
 
-### Quantitative Results
+### Quantitative Results On VTBench
 
-#### On VTBench
 
 <div align="center">
  
@@ -183,16 +180,6 @@ python src/run_vthinker.py --benchmark mathvision --eval
 
 </div>
 
-#### On General Reasoning Benchmarks
-
-<div align="center">
- 
-| Model | MathVision | We-Math | VisuLogic |
-|-------|------------|---------|-----------|
-| Qwen2.5-VL-7B | 23.0 | 61.7 | 26.0 |
-| **V-Thinker-7B** | **29.3** (+6.3) | **62.8** (+1.1) | **26.6** (+0.6) |
-
-</div>
 
 ### Qualitative Results
 
@@ -217,20 +204,22 @@ python src/run_vthinker.py --benchmark mathvision --eval
 ## 📄 Citation
 
 ```bibtex
-@article{vthinker2026,
-  title={V-Thinker: Interactive Thinking with Images},
-  author={Qiao, Runqi and Tan, Qiuna and Yang, Minghan and others},
-  journal={arXiv preprint arXiv:XXXX.XXXXX},
-  year={2026}
-}
+
+
 ```
+
+---
+
+## 🤝 Acknowledge
+
+This training implementation builds upon [**Thyme**](https://github.com/yfzhang114/Thyme) and [**Swift**](https://github.com/modelscope/swift), while our models are trained using [**Qwen2.5-VL**](https://github.com/QwenLM/Qwen2.5-VL). For evaluation, we rely on [**MathVision**](https://huggingface.co/datasets/MathLLMs/MathVision), [**We-Math**](https://huggingface.co/datasets/We-Math/We-Math), [**VisuLogic**](https://huggingface.co/datasets/VisuLogic/VisuLogic), and [**VLMEvalKit**](https://github.com/open-compass/VLMEvalKit). For the GRPO-stage data, we sincerely thank [**We-Math 2.0**](https://huggingface.co/datasets/We-Math/We-Math2.0-Standard), [**MM-Eureka**](https://huggingface.co/datasets/FanqingM/MMK12), and [**ThinkLite**](https://huggingface.co/collections/russwang/thinklite-vl) for their open contributions. We express our sincere gratitude to these projects for their invaluable contributions to the open-source community.
+
 
 ---
 
 ## 📞 Contact
 
-**Email**: qrq@bupt.edu.cn, qiunatan@bupt.edu.cn  
-**Issues**: [GitHub Issues](https://github.com/We-Math/V-Thinker/issues)
+For any questions or feedback, please reach out to us at qrq@bupt.edu.cn or qiunatan@bupt.edu.cn.
 
 ---
 
