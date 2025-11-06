@@ -149,7 +149,7 @@ conda create -n vthinker python=3.10
 conda activate vthinker
 pip install -e .
 ```
-### Usage Example: How to use VThinker
+### Usage Example: How to use V-Thinker
 We provide a simple script (eval/vtbench_IR/inference.py) to inference on custom cases. Simply run:
 ```bash
 cd ./eval/vtbench_IR
