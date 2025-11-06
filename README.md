@@ -1,4 +1,9 @@
 
+<div align="center">
+  <img src="./assets/logo.png" alt="V-Thinker Logo" width="400">
+</div>
+
+
 <h1 align="center">✨ V-Thinker: Interactive Thinking with Images</h1>
 
 <!-- <div align="center">
