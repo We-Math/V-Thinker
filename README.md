@@ -103,6 +103,12 @@ conda create -n vthinker python=3.10
 conda activate vthinker
 pip install -e .
 ```
+### Usage Example: How to use VThinker
+We provide a simple script (eval/vtbench_IR/inference.py) to inference on custom cases. Simply run:
+```bash
+cd ./eval/vtbench_IR
+python inference.py
+```
 
 ### Training
 Download the perception dataset ([V-Perception-40K](https://huggingface.co/datasets/We-Math/V-Perception-40K)), SFT dataset ([V-Interaction-400K](https://huggingface.co/datasets/We-Math/V-Interaction-400K)),  RL dataset ([WeMath 2.0](https://huggingface.co/datasets/We-Math/V-Interaction-400K), [MMK12](https://huggingface.co/datasets/FanqingM/MMK12), [ThinkLite](https://huggingface.co/datasets/russwang/ThinkLite-VL-hard-11k)) to the data folder and modify the image path as needed to match your coding environment.
