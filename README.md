@@ -61,8 +61,8 @@ V-Thinker is still under development and there are many issues and room for impr
 
 | Dataset | Description | Size | Download |
 |---------|-------------|------|----------|
-| **V-Interaction-400K** | Interactive reasoning with 25+ domains | 400K | [🤗 HuggingFace](https://huggingface.co/datasets/We-Math/V-Interaction-400K) |
-| **V-Perception-40K** | Point-level perception alignment | 40K | [🤗 HuggingFace](https://huggingface.co/datasets/We-Math/V-Perception-40K) |
+| **V-Interaction-400K** | Large-scale interactive reasoning dataset | 400K | [🤗 HuggingFace](https://huggingface.co/datasets/We-Math/V-Interaction-400K) |
+| **V-Perception-40K** | Point-level perception alignment dataset | 40K | [🤗 HuggingFace](https://huggingface.co/datasets/We-Math/V-Perception-40K) |
 | **VTBench** | Expert-verified interactive benchmark | 1.5K | [🤗 HuggingFace](https://huggingface.co/datasets/We-Math/VTBench) |
 
 
@@ -71,13 +71,10 @@ V-Thinker is still under development and there are many issues and room for impr
 
 Automated synthesis of high-quality interactive reasoning data across three dimensions:
 
-- **Diversity**: Knowledge-driven synthesis from 25+ domains → **22,319 nodes** across 7 layers
+- **Diversity**: Knowledge-driven synthesis from **seed knowledge (We-Math2.0)** → **25 domains** → **22,319 nodes**
 - **Quality**: Coordinated checker-repairer mechanism for multi-modal consistency
 - **Difficulty**: Progressive expansion via parallel & sequential strategies
 
-**Outputs**: 
-- 📊 **V-Interaction-400K**: Large-scale interactive reasoning dataset
-- 🎯 **V-Perception-40K**: Point-level perception alignment dataset
 
 <div align="center">
 <img width="679" height="280" alt="image" src="./assets/2.png" />
@@ -91,23 +88,25 @@ Two-stage framework progressively building perception and interactive reasoning:
 
 **Stage 1: Perception Alignment** → Fine-grained visual grounding with point-level supervision
 
-**Stage 2: Interactive Reasoning** → Cold-start SFT + RL in sandboxed code executor
+**Stage 2: Interactive Reasoning** → Cold-start SFT + RL in sandboxed code executor.
 
 
 ### 📊 VTBench Benchmark
 
 Expert-verified benchmark with **1,500 QA pairs** across three hierarchical dimensions:
 
+<div align="center">
 <img width="686" height="298" alt="image" src="./assets/vtbench.png" />
 
-| Metric | Specification |
+| Task | Specification |
 |--------|---------------|
-| **Samples** | 1,500 expert-verified pairs (500 per task type) |
-| **Sources** | 9 open-source benchmarks |
-| **Domains** | Logical Reasoning, Geometry, Algebra, Statistics |
+| **Perception** | Visual grounding via coordinate prediction and rendering. |
+| **Instruction-Guided Interaction** | Visual editing and manipulation from instructions. |
+| **Interactive Reasoning** | Multimodal reasoning and answer generation. |
+
+</div>
 
 ---
-
 
 ## 🚀 Quick Start
 
@@ -163,9 +162,11 @@ python src/run_vthinker.py --benchmark mathvision --eval
 
 ---
 
-## 🏆 Performance Results
+## 🏆 Experiments Results
 
-### VTBench Results
+### Quantitative Results
+
+#### On VTBench
 
 | Model | Perception | Instruction-Guided | Interactive Reasoning |
 |-------|------------|-------------------|----------------------|
@@ -174,26 +175,29 @@ python src/run_vthinker.py --benchmark mathvision --eval
 | Qwen2.5-VL-7B | 9.6 | 8.8 | 32.2 |
 | **V-Thinker-7B** | **18.0** (+8.4) | **34.6** (+25.8) | **41.8** (+9.6) |
 
-### General Reasoning Benchmarks
+### On General Reasoning Benchmarks
 
 | Model | MathVision | We-Math | VisuLogic |
 |-------|------------|---------|-----------|
 | Qwen2.5-VL-7B | 23.0 | 61.7 | 26.0 |
 | **V-Thinker-7B** | **29.3** (+6.3) | **62.8** (+1.1) | **26.6** (+0.6) |
 
----
+### Qualitative Results
 
-## 🔬 Case Studies
+<div align="center">
 <img width="641" height="637" alt="截屏2025-11-06 00 54 13" src="./assets/10.png" />
 
 <img width="578" height="131" alt="image" src="./assets/rollout.png" />
 
 <img width="585" height="711" alt="image" src="./assets/510265165-35133170-ce70-41c0-891c-b82091aa6329.png" />
 
+</div>
 
-## 🔬 Evovled Knowledge System
+
+### 🔬 Evovled Knowledge System
+<div align="center">
 <img width="589" height="374" alt="image" src="./assets/tree.png" />
-
+</div>
 
 
 ---
@@ -222,8 +226,3 @@ python src/run_vthinker.py --benchmark mathvision --eval
 
 This project is released under the [MIT License](LICENSE).
 
----
-
-[![Star History Chart](https://api.star-history.com/svg?repos=We-Math/V-Thinker&type=Date)](https://www.star-history.com/#We-Math/V-Thinker&Date)
-
-<div align="center"><b>⭐ Star us on GitHub to stay updated! ⭐</b></div>
