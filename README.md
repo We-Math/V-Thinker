@@ -1,7 +1,10 @@
-<div align="center">
+
+<h1 align="center">✨ V-Thinker: Interactive Thinking with Images</h1>
+
+<!-- <div align="center">
 <img width="380" height="163" alt="image" src="./assets/1.png" />
 </div>
-<h1 align="center">✨ V-Thinker: Interactive Thinking with Images</h1>
+ -->
 
 <div align="center">
 
@@ -22,23 +25,39 @@
 
 ## 📣 Latest News
 
+- **[Nov 7, 2026]**: 🔥 We released **V-Interaction-400K**, a large-scale, high-quality visual interaction dataset that can also be extended to image-to-code tasks. Checkout 🤗[V-Interaction-400K](https://huggingface.co/datasets/We-Math/V-Interaction-400K) here.
+- **[Nov 7, 2026]**: 🔥 We released **V-Perception-40K**, a high-quality dataset for point-level perceptual alignment. Checkout 🤗[V-Perception-40K](https://huggingface.co/datasets/We-Math/V-Perception-40K) here.
+- **[Nov 7, 2026]**: 🔥 We released **VTBench**, a standardized benchmark for interactive visual reasoning across three task types — Perception, Instruction-Guided Interaction, and Interactive Reasoning. Checkout 🤗[VTBench](https://huggingface.co/datasets/We-Math/VTBench) here.
 - **[Nov 7, 2026]**: 🚀 V-Thinker codebase and datasets released!
-- **[Nov 7, 2026]**: 📄 Our paper is now available on arXiv.
-- **[Nov 7, 2026]**: 🎯 Introduced **VTBench**, an expert-verified benchmark for vision-centric interactive reasoning.
+- **[Nov 7, 2026]**: 📄 Our paper is now available on arXiv and Hugging Face daily paper.
+
 
 ---
-
 ## :mag_right: Roadmap
+**🛠️ V-Thinker is still evolving!**
 
-Tool-star is still under development and there are many issues and room for improvement. We will continue to update. And we also sincerely welcome contributions on this open-source toolkit.
-- [x] Release tiny LLM version (e.g. 0.5B, 1.5B)
-- [x] Support larger parameter size LLM (e.g. 7B)
-- [x] Update asynchronous and efficient training framework.（See **[ARPO](https://github.com/dongguanting/ARPO)** , which significantly accelerates the training process for Tool-star (**~4 times faster** )）
+V-Thinker is still under development and there are many issues and room for improvement. We will continue to update. And we also sincerely welcome contributions on this open-source toolkit.
+- [x] Release codebase and datasets.
+- [x] Release V-Thinker-7B.
+- [ ] Support larger parameter size LMM.
+- [ ] Release knowledge system and visual tool system.
+- [ ] Release improved checkpoints.
 
 
 ---
 
-## 📂 Datasets
+## 💡 Overview
+
+
+**V-Thinker** is a general-purpose multimodal reasoning assistant that enables **Interactive Thinking with Images** through end-to-end reinforcement learning. Unlike traditional vision-language models, V-Thinker actively **interacts** with visual content—editing, annotating, and transforming images to simplify complex problems.
+
+<div align="center">
+<img width="682" height="299" alt="image" src="./assets/3.png" />
+</div>
+
+
+
+### 📂 Datasets
 
 | Dataset | Description | Size | Download |
 |---------|-------------|------|----------|
@@ -47,19 +66,6 @@ Tool-star is still under development and there are many issues and room for impr
 | **VTBench** | Expert-verified interactive benchmark | 1.5K | [🤗 HuggingFace](https://huggingface.co/datasets/We-Math/VTBench) |
 
 
----
-
-## 💡 Overview
-
-> *"The soul never thinks without an image." — Aristotle*
-
-**V-Thinker** is a general-purpose multimodal reasoning assistant that enables **Interactive Thinking with Images** through end-to-end reinforcement learning. Unlike traditional vision-language models, V-Thinker actively **interacts** with visual content—editing, annotating, and transforming images to simplify complex problems.
-
-<img width="682" height="299" alt="image" src="./assets/3.png" />
-
----
-
-## ✨ Key Features
 
 ### 🔄 Data Evolution Flywheel
 
@@ -73,7 +79,11 @@ Automated synthesis of high-quality interactive reasoning data across three dime
 - 📊 **V-Interaction-400K**: Large-scale interactive reasoning dataset
 - 🎯 **V-Perception-40K**: Point-level perception alignment dataset
 
----
+<div align="center">
+<img width="679" height="280" alt="image" src="./assets/2.png" />
+</div>
+
+
 
 ### 📚 Visual Progressive Training Curriculum
 
@@ -83,15 +93,8 @@ Two-stage framework progressively building perception and interactive reasoning:
 
 **Stage 2: Interactive Reasoning** → Cold-start SFT + RL in sandboxed code executor
 
----
 
-## 🎬 Interactive Image Examples
-
-<img width="679" height="280" alt="image" src="./assets/2.png" />
-
----
-
-## 📊 VTBench Benchmark
+### 📊 VTBench Benchmark
 
 Expert-verified benchmark with **1,500 QA pairs** across three hierarchical dimensions:
 
@@ -102,6 +105,8 @@ Expert-verified benchmark with **1,500 QA pairs** across three hierarchical dime
 | **Samples** | 1,500 expert-verified pairs (500 per task type) |
 | **Sources** | 9 open-source benchmarks |
 | **Domains** | Logical Reasoning, Geometry, Algebra, Statistics |
+
+---
 
 
 ## 🚀 Quick Start
@@ -139,17 +144,17 @@ Environment setup for eval
 ```bash
 pip install --upgrade vllm
 ```
-Download the [VTBench](https://huggingface.co/datasets/We-Math/VTBench) to the data folder and corresponding images to the eval/vtbrnch_IP, eval/vtbrnch_IGI, eval/vtbrnch_Perception folder.
+Download the [VTBench](https://huggingface.co/datasets/We-Math/VTBench) to the data folder and corresponding images to the eval/vtbench_IR, eval/vtbench_IGI, eval/vtbench_Perception folder.
 
 Please ensure you have modified the model paths in the script to match your environment.
 ```bash
 # Run on VTBench
-cd eval/vtbrnch_IP
+cd eval/vtbench_IR
 sh run.sh
 ```
-Download the [MathVison](https://huggingface.co/datasets/We-Math/VTBench), [WeMath](https://huggingface.co/datasets/We-Math/VTBench), [Visulogic](https://huggingface.co/datasets/We-Math/VTBench) to the data folder and modify the image path as needed to match your coding environment.
+Download the [MathVison](https://huggingface.co/datasets/We-Math/VTBench), [WeMath](https://huggingface.co/datasets/We-Math/We-Math), [VisuLogic](https://huggingface.co/datasets/VisuLogic/VisuLogic/tree/main) to the data folder and modify the image path as needed to match your coding environment.
 
-For Visulogic, you also need to download the corresponding [Visulogic images](https://huggingface.co/datasets/We-Math/VTBench) to the eval/visulogic folder.
+For Visulogic, you also need to download the corresponding [VisuLogic images](https://huggingface.co/datasets/VisuLogic/VisuLogic) to the eval/visulogic folder.
 ```bash
 # Run on general benchmarks
 cd eval/mathvision
