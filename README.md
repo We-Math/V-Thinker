@@ -70,7 +70,7 @@ V-Thinker is still under development and there are many issues and room for impr
 
 
 <div align="center">
-<img width="679" height="280" alt="image" src="./assets/2.png" />
+<img width="679" height="280" alt="image" src="./assets/fig2.jpg" />
 </div>
 
 
