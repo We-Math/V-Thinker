@@ -27,6 +27,7 @@
 <div align="center">
 🤗 <a href="https://huggingface.co/datasets/We-Math/V-Interaction-400K" target="_blank">V-Interaction-400K</a> ｜
 🤗 <a href="https://huggingface.co/datasets/We-Math/VTBench" target="_blank">VTBench</a> ｜
+🤗 <a href="https://huggingface.co/We-Math/V-Thinker" target="_blank">Models(V-Thinker)</a> ｜
 🤗 <a href="https://huggingface.co/datasets/We-Math/V-Perception-40K" target="_blank">V-Perception-40K</a>
 </div>
 
