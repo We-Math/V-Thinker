@@ -255,7 +255,7 @@ python src/run_vthinker.py --benchmark mathvision --eval
 ## 📄 Citation
 
 ```bibtex
-@misc{qiao2025vthinkerinteractivethinkingimages,
+@misc{qiao2025vthinker,
       title={V-Thinker: Interactive Thinking with Images}, 
       author={Runqi Qiao and Qiuna Tan and Minghan Yang and Guanting Dong and Peiqing Yang and Shiqiang Lang and Enhui Wan and Xiaowan Wang and Yida Xu and Lan Yang and Chong Sun and Chen Li and Honggang Zhang},
       year={2025},
