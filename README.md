@@ -12,8 +12,6 @@
 ![Multimodal Reasoning](https://img.shields.io/badge/Task-Multimodal_Reasoning-red) 
 
 
-
-
 </div>
 
 ---
