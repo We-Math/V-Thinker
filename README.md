@@ -48,7 +48,7 @@
 **🛠️ V-Thinker is still evolving!**
 
 V-Thinker is still under development and there are many issues and room for improvement. We will continue to update. And we also sincerely welcome contributions on this open-source toolkit.
-- [x] Release codebase and datasets *(preview version)*.
+- [x] Release codebase and datasets *(preview version 252K+37K)*.
 - [x] Release V-Thinker-7B.
 - [ ] Release knowledge system and visual tool system.
 - [ ] Release the complete version of datasets (planned before December).
