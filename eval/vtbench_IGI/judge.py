@@ -99,10 +99,10 @@ def encode_image_to_base64(image_path: str):
 def build_multimodal_prompts(items):
     prompts_data = []
     for it in items:
-        instruction = it.get("original_item", {}).get("instruction_guided_interaction", "")
-        orig_img_path = it.get("original_item", {}).get("image_path", "")
+        instruction = it.get("original_item", {}).get("question_instruction", "")
+        orig_img_path = it.get("original_item", {}).get("image", "")
         gen_img_path = it.get("aux_path", "")
-        gt_img_path = it.get("original_item", {}).get("instruction_guided_interaction_answer_path", "")
+        gt_img_path = it.get("original_item", {}).get("annotation_instruction", "")
         print(gt_img_path)
         if not instruction:
             prompts_data.append({"prompt": "Cannot judge: missing instruction (question2)", "multi_modal_data": None, "valid": False})
@@ -126,9 +126,9 @@ def build_multimodal_prompts(items):
             continue
             # -----------------------------
         try:
-            orig_img_pil = Image.open(it.get("original_item", {}).get("image_path", "")).convert("RGB")
+            orig_img_pil = Image.open(it.get("original_item", {}).get("image", "")).convert("RGB")
             gen_img_pil = Image.open(it.get("aux_path", "")).convert("RGB")
-            gt_img_pil = Image.open(it.get("original_item", {}).get("instruction_guided_interaction_answer_path", "")).convert("RGB")
+            gt_img_pil = Image.open(it.get("original_item", {}).get("annotation_instruction", "")).convert("RGB")
         except Exception as e:
             print(f"[WARN] Failed to load one of the images as PIL object: {e}")
             prompts_data.append({"prompt": "Cannot judge: image loading failed", "pil_images": None, "valid": False})

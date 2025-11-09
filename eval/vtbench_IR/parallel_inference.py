@@ -71,8 +71,8 @@ def main():
 
     # Using tqdm to show a progress bar for this specific worker
     for item in tqdm(data_to_process, desc=f"Worker {WORKER_ID} Evaluating", position=WORKER_ID):
-        question_text = item.get("interactive_reasoning_question")
-        image_path = item.get("image_path")
+        question_text = item.get("question_reasoning")
+        image_path = item.get("image")
         
         # Construct the full, normalized image path
 

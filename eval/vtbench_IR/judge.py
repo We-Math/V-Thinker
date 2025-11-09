@@ -64,9 +64,9 @@ def get_multi_modal_input(args, data):
     valid_indices = []
 
     for index, item in enumerate(data):
-        if "original_item" in item and "interactive_reasoning_answer" in item["original_item"] and item["original_item"]["interactive_reasoning_answer"] is not None:
-            questions.append(item["original_item"]["interactive_reasoning_question"])
-            gts.append(item["original_item"]["interactive_reasoning_answer"])
+        if "original_item" in item and "question_reasoning" in item["original_item"] and item["original_item"]["interactive_reasoning_answer"] is not None:
+            questions.append(item["original_item"]["question_reasoning"])
+            gts.append(item["original_item"]["answer_reasoning"])
             extractions.append(item["Extracted answer"])
             valid_indices.append(index)
     return questions, gts, extractions, valid_indices

@@ -74,32 +74,9 @@ def main():
         import ast
 
 # Your original line - we start with this
-        question_data = item.get("perception_question")
+        question_text = item.get("question_perception")
 
-        question_text = "" 
-
-        if isinstance(question_data, dict):
-            question_keys = [key for key in question_data if key.startswith('question')]
-            try:
-                question_keys.sort(key=lambda k: int(k[len('question'):]))
-                
-                extracted_questions = [question_data[key] for key in question_keys]
-                
-                question_text = "; ".join(extracted_questions)
-
-            except ValueError:
-                print("error")
-            
-        else:
-            # if isinstance(question_data, str):
-            #     try:
-            #         question_data = ast.literal_eval(question_data)
-            #         # ... 此处重复上面的 if isinstance(question_data, dict) 逻辑
-            #     except (ValueError, SyntaxError):
-            #         print(f"无法解析字符串: {question_data}")
-            pass
-
-        image_path = item.get("image_path")
+        image_path = item.get("image")
         
         # Construct the full, normalized image path
         if not question_text or not image_path:

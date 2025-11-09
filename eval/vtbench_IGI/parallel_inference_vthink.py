@@ -71,8 +71,8 @@ def main():
 
     # Using tqdm to show a progress bar for this specific worker
     for item in tqdm(data_to_process, desc=f"Worker {WORKER_ID} Evaluating", position=WORKER_ID):
-        question_text = item.get("instruction_guided_interaction")
-        image_path = item.get("image_path")
+        question_text = item.get("question_instruction")
+        image_path = item.get("image")
 
         if not question_text or not image_path:
             print(f"[Worker {WORKER_ID}] Skipping item due to missing 'question1' or 'img_q_path': {item}")

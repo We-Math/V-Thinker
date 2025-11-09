@@ -147,8 +147,8 @@ def main(args):
 
 
     if not args.reuse_judge:
-        questions = [str(it.get("interactive_reasoning_question", "")) for it in items]
-        gts       = [str(it.get("interactive_reasoning_answer", "")) for it in items]
+        questions = [str(it.get("question_reasoning", "")) for it in items]
+        gts       = [str(it.get("answer_reasoning", "")) for it in items]
         responses = [str(it.get("model_response", "")) for it in items]
         
 
