@@ -46,11 +46,11 @@ def generate_prompt_final_qa(user_question, user_image_path):
         user_image_size = "Unable to determine (error reading image)"
 
     prompt = f"""
-    "<image>\n{user_question}\n\n"
+    <image>\n{user_question}\n
     "If your code processes the image, use: image_path = '{user_image_path}'.\n"
     "### **Output Format (strict adherence required):**\n\n"
-    "<think>Your detailed reasoning process, including any code, should go here.</think>\n"
-    "<answer>Your final answer to the user's question goes here.</answer>\n"
+    <think>Your detailed reasoning process, including any code, should go here.</think>\n
+    <answer>Your final answer to the user's question goes here.</answer>\n
     """
 
 
